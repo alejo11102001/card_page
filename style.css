@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo-base);
+    font-family: 'Garamond', serif;
+}
+
+:root {
+    --verde: #43d281;
+    --fondo-claro: #FFE5A1;
+    --fondo-base: #FFF8E7;
+}
+
+.card__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verde);
+    height: 80px;
+}
+
+.main__container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 40px;
+}
+
+.section__article{
+    margin: 20px;
+    width: 350px;
+    border: 2px solid;
+    padding: 15px;
+    background-color: var(--fondo-claro);
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.section__article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.container__section__input{
+    position: fixed;
+    left: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    gap: 8px;
+}
+
+.input__search {
+    height: 36px;
+    width: 200px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid var(--verde);
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Garamond', serif;
+}
+
+.input__search:focus {
+    outline: none;
+    border-color: #2bb06c;
+    box-shadow: 0 0 8px rgba(67, 210, 129, 0.4);
+}
+
+.input__button {
+    height: 36px;
+    width: 80px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--verde);
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Garamond', serif;
+    cursor: pointer;
+}
+
+.input__button:hover {
+    background-color: #2bb06c;
+    transform: scale(1.05);
+}
+
+.container__section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70%;
+}
+
+.article__title{
+    margin: 10px;
+}
+
+.article__description{
+    margin: 10px;
+}
+
+.article__span{
+    margin: 10px;
+}
+
+.article__image{
+    width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .main__container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .container__section {
+        width: 100%;
+        align-items: center;
+    }
+
+    .section__article {
+        width: 90%;
+    }
+
+    .container__section__input {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        background-color: var(--fondo-claro);
+        padding: 10px;
+        margin-top: 0;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .input__search {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .input__button {
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .card__header {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .header__title {
+        font-size: 1.2rem;
+    }
+}
